@@ -1,0 +1,316 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: white;
+  color: #333;
+  line-height: 1.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* CV Container */
+.cv-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Bento Grid Layout */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  grid-template-areas:
+    "photo header about about"
+    "exp   exp    exp   location"
+    "exp   exp    exp   languages"
+    "skills skills interests interests"
+    "contact contact profile profile";
+}
+
+/* Bento Box Base Styles */
+.bento-box {
+  background-color: #f0f0f0;
+  border-radius: 24px;
+  padding: 24px;
+}
+
+/* Photo Box */
+.photo-box {
+  grid-area: photo;
+  padding: 0;
+  object-fit: cover;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Header Box */
+.header-box {
+  grid-area: header;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* About Box */
+.about-box {
+  grid-area: about;
+}
+
+.about {
+  background-color: white;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+/* Experiences Box */
+.experiences-box {
+  grid-area: exp;
+  min-height: 400px; /* Hauteur minimale pour éviter les chevauchements */
+}
+
+.experience-item {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 24px;
+  background-color: white;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+.experience-item.nws {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 24px;
+  color: white;
+  background-color: #2294fb;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+.experience-item.nws .location,
+.experience-item.nws .description {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.date {
+  min-width: 140px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.experience-content h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.location {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.description {
+  font-size: 14px;
+  color: #666;
+}
+
+.experience-content ul {
+  list-style: none;
+  margin-top: 8px;
+}
+
+.experience-content li {
+  font-size: 14px;
+  margin-bottom: 4px;
+  position: relative;
+  padding-left: 12px;
+}
+
+.experience-content li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+}
+
+/* Location Box */
+.location-box {
+  grid-area: location;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.location-image {
+  position: relative;
+  margin-top: 16px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.location-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.location-name {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  color: white;
+  font-weight: 600;
+}
+
+/* Languages Box */
+.languages-box {
+  grid-area: languages;
+}
+
+.languages-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.language {
+  background-color: white;
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+/* Skills Box */
+.skills-box {
+  grid-area: skills;
+  min-height: 200px; /* Hauteur minimale pour éviter les chevauchements */
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.skill {
+  background-color: white;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+/* Interests Box */
+.interests-box {
+  grid-area: interests;
+}
+
+.interests-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.interests-grid span {
+  background-color: white;
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+/* Contact Box */
+.contact-box {
+  grid-area: contact;
+}
+
+.contact-box p {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.contact-box span {
+  font-weight: 500;
+}
+
+/* Profile Interest Box */
+.profile-interest-box {
+  grid-area: profile;
+  background-color: #2294fb;
+  color: white;
+}
+
+.interest-question {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.interest-cta {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.interest-name {
+  font-size: 16px;
+}
+
+/* Section Headings */
+h2 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .bento-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "photo"
+      "header"
+      "about"
+      "exp"
+      "skills"
+      "languages"
+      "interests"
+      "location"
+      "contact"
+      "profile";
+    gap: 16px;
+  }
+
+  .experience-item {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .experience-item.nws {
+    margin: 0;
+    margin-bottom: 16px;
+  }
+}
+
+.experience-item:last-child {
+  margin-bottom: 0;
+}
