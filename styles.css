@@ -82,7 +82,7 @@ body {
 /* Experiences Box */
 .experiences-box {
   grid-area: exp;
-  min-height: 400px; /* Hauteur minimale pour éviter les chevauchements */
+  min-height: 400px;
 }
 
 .experience-item {
@@ -203,7 +203,7 @@ body {
 /* Skills Box */
 .skills-box {
   grid-area: skills;
-  min-height: 200px; /* Hauteur minimale pour éviter les chevauchements */
+  min-height: 200px;
 }
 
 .skills-list {
