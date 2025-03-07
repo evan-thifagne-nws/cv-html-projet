@@ -171,6 +171,7 @@ body {
   width: 100%;
   height: auto;
   object-fit: contain;
+  border-radius: 16px;
 }
 
 .location-name {
@@ -258,6 +259,9 @@ body {
   grid-area: profile;
   background-color: #2294fb;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .interest-question {
